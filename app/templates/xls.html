@@ -1,0 +1,13 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>提取文本</h2>
+<p>-------------------------</p>
+<form action="/select_column/" method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    {{ form.colnum.label }} {{ form.colnum(size=1) }}
+    <input type="submit" value="提交">
+</form>
+<p>-------------------------</p>
+{% endblock %}

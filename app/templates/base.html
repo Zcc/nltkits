@@ -1,0 +1,25 @@
+<html>
+<head>
+    {% if title %}
+    <title>NLPToolKits - {{title}}</title>
+    {% else %}
+    <title>NLPToolKits</title>
+    {% endif %}
+</head>
+<body>
+<h1>NLPToolKits</h1>
+<hr>
+<div><a href="/index">Home</a></div>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul>
+    {% for message in messages %}
+    <li style="color: red;">[{{ message }}]</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+{% block content %}{% endblock %}
+
+</body>
+</html>

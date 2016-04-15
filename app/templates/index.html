@@ -1,0 +1,22 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>上传文件</h2>
+<p>-------------------------</p>
+<form action="/upload/" method="POST" enctype="multipart/form-data">
+     {{ form.hidden_tag() }}
+    {{ form.file.label }} {{ form.file(size=20) }}
+    <input type="submit" value="提交">
+</form>
+<p>-------------------------</p>
+
+<ul>
+    <li>实现功能：文本提取、词频统计、别称扩展、同义词扩展、idf、LDA</li>
+    <li>若语料为Excel文件，则默认第1行为列名，文本处理默认从第2行开始处理。</li>
+    <li>若语料为纯文本文件，需一行一个词或句子。</li>
+    <li>同义词扩展使用哈工大同义词林。</li>
+    <li>别称扩展使用wikidata的别称属性。</li>
+</ul>
+{% endblock %}
+
