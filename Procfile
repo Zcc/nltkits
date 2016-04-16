@@ -1,1 +1,1 @@
-web: gunicorn -w 4 -b 0.0.0.1:$PORT -k gevent run:app
+web: gunicorn -w 4 -b 0.0.0.1:$PORT -k gevent run:__init__.py --log-file=-
