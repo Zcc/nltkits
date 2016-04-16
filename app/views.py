@@ -6,7 +6,7 @@ from werkzeug.utils import secure_filename
 from app import app
 import json
 import os
-from jtnltk import qacorpus, frequency, synonymy, grammodel
+from jtnltk import qacorpus, frequency, synonymy
 from forms import myForm
 
 
@@ -87,12 +87,6 @@ def process():
         elif form.fre.data == 'sy':
             synonymy.get_hit_synonymy(rawtext)
             link = u'/result/synonymy.txt'
-        elif form.fre.data == 'tfidf':
-            grammodel.train_tfidf(rawtext)
-            link = u'/result/idf.txt'
-        elif form.fre.data == 'lda':
-            grammodel.train_lda(rawtext)
-            link = u'/result/lda.txt'
     return render_template('process.html', form=form, link=link, label=label)
 
 
