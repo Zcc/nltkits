@@ -2,6 +2,8 @@ boto==2.39.0
 bz2file==0.98
 Flask==0.10.1
 Flask-WTF==0.12
+gevent==1.1.1
+greenlet==0.4.9
 gunicorn==19.4.5
 httpretty==0.8.10
 itsdangerous==0.24
