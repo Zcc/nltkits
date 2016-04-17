@@ -21,24 +21,24 @@ def index():
 def upload():
     form = myForm()
     if request.method == 'GET':
-        return redirect('/index')
+        return redirect('/index/')
     elif request.method == 'POST':
         fil = request.files['file']
     fname = secure_filename(fil.filename)
     # save_path = app.config['UPLOAD_FOLDER']
     if fname.strip() == '':
         flash("Please select file.")
-        return redirect('/index')
+        return redirect('/index/')
     if 'xlsx' in fname or 'xls' in fname:
         fname = 'tmp.xlsx'
         save_path = app.config['TMP_FOLDER']
         fil.save(os.path.join(save_path, fname))
-        return redirect('/select_column')
+        return redirect('/select_column/')
     else:
         fname = 'rawtext.txt'
         save_path = app.config['TMP_FOLDER']
         fil.save(os.path.join(save_path, fname))
-        return redirect('/process')
+        return redirect('/process/')
 
 
 @app.route('/select_column/', methods=['GET', 'POST'])
