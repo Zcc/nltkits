@@ -3,14 +3,14 @@
 
 {% block content %}
 <h2>文本处理</h2>
-<p>-------------------------</p>
+<p>--------------------------------------------------</p>
 
 <form action="/process/" method="POST" enctype="multipart/form-data">
      {{ form.hidden_tag() }}
     {{ form.fre() }}
     <input type="submit" value="处理">
 </form>
-<p>-------------------------</p>
+<p>--------------------------------------------------</p>
 <a href="{{ link }}">{{ label }}</a>
 
 {% endblock %}

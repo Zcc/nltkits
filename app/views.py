@@ -61,8 +61,8 @@ def download_file(filename):
     re.write(open(os.path.join(app.config['TMP_FOLDER'], filename)).read())
     re.close()
     uploads = os.path.join(app.root_path, 'result')
-    print uploads
-    return send_from_directory(directory=uploads, filename=filename, as_attachment=True)
+    # print uploads
+    return send_from_directory(directory = uploads, filename = filename, as_attachment = True)
 
 
 @app.route('/process/', methods=['GET', 'POST'])

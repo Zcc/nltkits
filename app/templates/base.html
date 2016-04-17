@@ -5,11 +5,17 @@
     {% else %}
     <title>NLPToolKits</title>
     {% endif %}
+    
 </head>
+
 <body>
-<h1>NLPToolKits</h1>
+<table align="center">
+<tr>
+<td  align="center">
+	<h1>NLPToolKits</h1>
 <hr>
-<div><a href="/index">Home</a></div>
+<a href="/index">Home</a>
+
 {% with messages = get_flashed_messages() %}
 {% if messages %}
 <ul>
@@ -20,6 +26,21 @@
 {% endif %}
 {% endwith %}
 {% block content %}{% endblock %}
+</br>
+</td>
+</tr>
+<tr>
+<td>
+	<li>实现功能：文本提取、词频统计、别称扩展、同义词扩展</li>
+    <li>若语料为Excel文件，则默认第1行为列名，文本处理默认从第2行开始处理。</li>
+    <li>若语料为纯文本文件，需一行一个词或句子。</li>
+    <li>同义词扩展使用哈工大同义词林。</li>
+    <li>别称扩展使用wikidata的别称属性。</li>
+</td>
+</tr>
+</table>
+
+    
 
 </body>
 </html>
