@@ -34,6 +34,11 @@ def upload():
         save_path = app.config['TMP_FOLDER']
         fil.save(os.path.join(save_path, fname))
         return redirect('/select_column/')
+    elif '.xml' in fname:
+        fname = 'tmp.xml'
+        save_path = app.config['TMP_FOLDER']
+        fil.save(os.path.join(save_path, fname))
+        return redirect('/process/')
     else:
         fname = 'rawtext.txt'
         save_path = app.config['TMP_FOLDER']
@@ -87,6 +92,9 @@ def process():
         elif form.fre.data == 'sy':
             synonymy.get_hit_synonymy(rawtext)
             link = u'/result/synonymy.txt'
+        elif form.fre.data == 'xml':
+            frequency.statistics()
+            link = u'/result/CfgKeywordWeight.properties'
     return render_template('process.html', form=form, link=link, label=label)
 
 

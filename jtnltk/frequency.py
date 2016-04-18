@@ -6,11 +6,9 @@ reload(sys)
 sys.setdefaultencoding("utf-8")
 
 
-def xmlprocess(data):
-    tmpfile = '../tmp/tmp.xml'
-    f = open(tmpfile, 'w')
-    f.write(data)
-    f.close()
+def xmlprocess():
+    tmpfile = 'static/tmp/tmp.xml'
+
     dom = xml.dom.minidom.parse(tmpfile)
     root = dom.documentElement
     segs = root.getElementsByTagName("Question")
@@ -26,9 +24,11 @@ def Stopwords():
     return [s.strip() for s in open('dic/stopwords.dic').readlines()]
 
 
-def statistics(data):
-    content = xmlprocess(data)
+def statistics():
+    result = open('static/tmp/CfgKeywordWeight.properties', 'w')
+    content = xmlprocess()
     num = len(content)
+    result.write(str(num) + '\n')
     worddict = {}
     stopwords = Stopwords()
     # print stopwords[:10]
@@ -46,7 +46,9 @@ def statistics(data):
         for key in worddict:
             if key in words:
                 worddict[key]['idf'] += 1
-
+    for key in worddict:
+        result.write(str(key)+'\t'+str(worddict[key]['idf'])+'\t'+str(worddict[key]['tf'])+'\n')
+    result.close()
     return num, worddict
 
 if __name__ == '__main__':
