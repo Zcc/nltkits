@@ -15,7 +15,7 @@ chardet==2.2.1
 Codeville==0.8.0
 colorama==0.3.6
 coloredlogs==5.0
-cryptography==0.8.2
+cryptography==3.2
 cssselect==0.9.1
 cvs2svn==2.4.0
 Cython==0.22
