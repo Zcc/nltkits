@@ -34,7 +34,7 @@ git-review==1.25.0
 googlecl==0.9.14
 h5py==2.5.0
 htmltmpl==1.22
-httplib2==0.9.1
+httplib2==0.19.0
 httpretty==0.8.10
 humanfriendly==1.44.3
 isodate==0.5.1
