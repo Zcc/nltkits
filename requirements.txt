@@ -75,7 +75,7 @@ Pyrex==0.9.9
 python-cloudfiles==1.7.11
 python-nghttp2==1.7.1
 pyxdg==0.25
-PyYAML==3.11
+PyYAML==5.4
 pyzmq==15.2.0
 qrcode==5.2.2
 queuelib==1.4.2
