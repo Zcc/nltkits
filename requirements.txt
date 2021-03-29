@@ -63,7 +63,7 @@ pycparser==2.12
 pycrypto==2.6
 pydns==2.3.6
 pygame===1.9.1release
-Pygments==2.0.2
+Pygments==2.7.4
 pygobject==3.18.2
 PyOpenGL==3.1.0
 PyOpenGL-accelerate==3.1.0
