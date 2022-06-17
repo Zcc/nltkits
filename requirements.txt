@@ -50,7 +50,7 @@ mercurial==3.5.1
 mingc==0.4.7
 mutagen==1.26
 netsnmp-python==1.0a1
-numpy==1.10.4
+numpy==1.21.0
 odfpy==0.9.5
 offlineimap==6.5.5
 pbr==1.8.1
