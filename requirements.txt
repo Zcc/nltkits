@@ -43,7 +43,7 @@ Jinja2==2.7.3
 kapidox==5.12.0
 lockfile==0.10.2
 lxml==3.4.4
-Mako==1.0.1
+Mako==1.2.2
 marisa==0.0.0
 MarkupSafe==0.23
 mercurial==3.5.1
