@@ -55,7 +55,7 @@ odfpy==0.9.5
 offlineimap==6.5.5
 pbr==1.8.1
 pexpect-u==2.5.1
-Pillow==2.8.2
+Pillow==9.3.0
 ply==3.6
 pyasn1==0.1.6
 pyasn1-modules==0.0.8
